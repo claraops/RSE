@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+
 
 const ActionForm = ({ 
   formData, 
@@ -146,33 +148,7 @@ const ActionForm = ({
 </div>
 
 
-       {/* <div className="form-group">
-          <label>Populations cibles</label>
-          <div className="checkbox-group">
-            {populations.map(pop => (
-              <label key={pop.id}>
-                <input
-                  type="checkbox"
-                  name="populations"
-                  value={pop.type}
-                  checked={formData.populations.includes(pop.type)}
-                  onChange={(e) => {
-                    const newValues = e.target.checked
-                      ? [...formData.populations, pop.type]
-                      : formData.populations.filter(v => v !== pop.type);
-                    onChange({
-                      target: {
-                        name: 'populations',
-                        value: newValues
-                      }
-                    });
-                  }}
-                />
-                {pop.type}
-              </label>
-            ))}
-          </div>
-        </div> }
+     
         
         {/* Ressources */}
         <div className="form-group">
@@ -266,6 +242,14 @@ const ActionForm = ({
           )}
         </div>
       </form>
+
+       <section className="quick-actions">
+          <h2>Actions rapides</h2>
+          <div className="action-buttons">
+            <Link to="/planning" className="btn btn-secondary">Voir le planning</Link>
+            <Link to="/newsletter" className="btn btn-tertiary">Gérer newsletter</Link>
+          </div>
+        </section>
     </div>
   );
 };
