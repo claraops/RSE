@@ -1,7 +1,7 @@
 /* === Global Newsletter Page === */
 .newsletter {
   padding: 2rem;
-  background-color: #f8fafc;
+  background-color: #F5F5F5;
   min-height: 100vh;
   font-family: "Segoe UI", Roboto, sans-serif;
   color: #1e293b;
@@ -93,12 +93,12 @@
 }
 
 .btn-primary {
-  background-color: #2563eb;
+  background-color: #4CAF50;;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #1e40af;
+  background-color: #2E7D32;
 }
 
 .btn-secondary {
@@ -111,7 +111,7 @@
 }
 
 .btn-danger {
-  background-color: #ef4444;
+  background-color: #f76565;
   color: white;
 }
 

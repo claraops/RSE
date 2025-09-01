@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchActions } from '../services/api';
 import "./Dashboard.css";
+import SearchBar from '../components/SearchBar';
+import '../App.css';
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
@@ -14,6 +16,8 @@ const Dashboard = () => {
   const [recentActions, setRecentActions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+    const [filteredActions, setFilteredActions] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     loadActions();
@@ -61,6 +65,9 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <h1>Tableau de Bord RSE</h1>
+      <div className="action-search-container">
+            <SearchBar value={searchTerm} onChange={setSearchTerm} />
+          </div>
       
       <div className="stats-grid">
         <div className="stat-card">

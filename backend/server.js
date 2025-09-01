@@ -69,6 +69,18 @@ app.get('/api/test', (req, res) => {
   res.json({ message: 'Backend is working!' });
 });
 
+
+// Exemple en Express
+app.get('/api/actions/:id', async (req, res) => {
+    const id = req.params.id;
+    const action = await db.query('SELECT * FROM actionrse WHERE id = ?', [id]);
+    if (!action.length) {
+        return res.status(404).json({ error: 'Action non trouvée' });
+    }
+    res.json(action[0]);
+});
+
+
 // ========================
 // ROUTES NEWSLETTERS
 // ========================
