@@ -78,11 +78,7 @@ const Planning = () => {
         )}
       </div>
 
-      <div className="planning-actions">
-        <Link to="/create-action" className="btn btn-primary">
-          Ajouter une action au planning
-        </Link>
-      </div>
+     
     </div>
   );
 };

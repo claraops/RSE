@@ -13,6 +13,7 @@ import RSEPlatform from "./RSEPlatform";
 import Planning from "./components/Planning";
 import Newsletter from "./components/Newsletter";
 import Statistics from "./components/Statistics";
+import NewsletterDetail from "./components/NewsletterDetail";
 
 import "./App.css";
 
@@ -96,7 +97,16 @@ function App() {
               </PrivateRoute>
             }
           />
-          
+
+           <Route
+            path="/newsletters/:id"
+            element={
+              <PrivateRoute roles={["admin", "etudiant", "enseignant"]}>
+                <NewsletterDetail />
+              </PrivateRoute>
+            }
+          />
+         
           <Route
             path="/statistics"
             element={

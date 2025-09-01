@@ -3,6 +3,9 @@ const router = express.Router();
 const db = require("../config/db");
 const authMiddleware = require("../middlewares/authMiddleware");
 
+
+
+
 // GET toutes les actions
 router.get("/", authMiddleware(["admin", "etudiant", "enseignant"]), async (req, res) => {
   try {
