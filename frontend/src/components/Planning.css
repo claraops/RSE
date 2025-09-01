@@ -1,3 +1,5 @@
+
+
 /* === Global Planning Page === */
 .planning {
   padding: 2rem;
@@ -35,7 +37,7 @@
 }
 
 .planning-controls select:hover {
-  border-color: #2563eb;
+  border-color: #0a9621;
 }
 
 /* === Calendrier (Liste d’actions) === */
@@ -64,7 +66,7 @@
 .event-date {
   min-width: 90px;
   text-align: center;
-  background: #2563eb;
+  background: #0a9621;
   color: white;
   font-weight: bold;
   font-size: 1rem;
@@ -93,7 +95,7 @@
 }
 
 .event-status.in-progress {
-  background-color: #3b82f6;
+  background-color: #0a9621;
   color: white;
 }
 
@@ -106,7 +108,7 @@
   display: inline-block;
   margin-top: 0.3rem;
   font-size: 0.9rem;
-  color: #2563eb;
+  color: #0a9621;
   text-decoration: none;
   font-weight: 500;
 }
@@ -136,10 +138,10 @@
 }
 
 .btn-primary {
-  background-color: #2563eb;
+  background-color: #0a9621;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #1e40af;
+  background-color: #0a9621;
 }
